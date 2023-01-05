@@ -19,5 +19,8 @@ namespace Business.Constants
         public static string CarUpdated = "ARAC GUNCELLENDI";
 
         public static string CarNotAdded = "ARAC EKLENEMEDI";
+
+        public static string FilePathNotFound = "DOSYA YOLU BULUNAMADI";
+        public static string ImagesAdded = "RESIM EKLENDI";
     }
 }
