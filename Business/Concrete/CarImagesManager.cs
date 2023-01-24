@@ -1,12 +1,16 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Core.Utilities.Business;
+using Core.Utilities.Helpers.FileHelper;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
@@ -23,7 +27,7 @@ namespace Business.Concrete
         {
             IResult result = BusinessRules.Run(CheckIfCarImageLimit(carImages.CarId));
             if (result != null)
-            {
+            {    
                 return result;
             }
             carImages.ImagePath = _fileHelper.Upload(file, PathConstants.ImagesPath);
