@@ -12,8 +12,8 @@ namespace Business.Abstract
         IDataResult<List<Color>> GetAll();
         IDataResult<List<Color>>  GetById(int colorId);
 
-        IResult Add(Color customer);
-        IResult Delete(Color customer);
-        IResult Update(Color customer);
+        IResult Add(Color color);
+        IResult Delete(Color color);
+        IResult Update(Color color);
     }
 }
